@@ -1,28 +1,21 @@
 import turtle
-def draw_pentagram(some_turtle):
-    some_turtle.left(60)
-    some_turtle.forward(100)
-    some_turtle.right(120)
-    some_turtle.forward(100)
-    some_turtle.right(150)
-    some_turtle.forward(125)
-    some_turtle.right(150)
-    some_turtle.forward(110)
-    some_turtle.right(150)
-    some_turtle.forward(120)
+def draw_octagon(some_turtle):
+    for i in range(1,9):
+        some_turtle.forward(100)
+        some_turtle.right(45)
 
+
+def draw_pentagram(some_turtle):
+    for i in range(1,6):
+        some_turtle.forward(100) #1
+        some_turtle.left(72) #2
+        some_turtle.forward(100) #3
+        some_turtle.right(144) #4
 
 def draw_pentagon(some_turtle):
-    some_turtle.forward(100)
-    some_turtle.right(72)
-    some_turtle.forward(100)
-    some_turtle.right(72)
-    some_turtle.forward(100)
-    some_turtle.right(72)
-    some_turtle.forward(100)
-    some_turtle.right(72)
-    some_turtle.forward(100)
-    some_turtle.right(72)
+    for i in range(1,6):
+        some_turtle.forward(100)
+        some_turtle.right(72)
 
 
 def draw_hexagon(some_turtle):
@@ -50,14 +43,15 @@ def draw_shape():
     mover = turtle.Turtle()
     mover.shape("turtle")
     mover.color("yellow")
-    draw_pentagon(mover)
-    #for i in range(1,37):
+
+    for i in range(1,37):
         #draw_square(mover)
         #draw_triangle(mover)
         #draw_circle(mover)
         #draw_hexagon(mover)
         #draw_pentagon(mover)
         #draw_pentagram(mover)
-        #mover.right(10)
+        draw_octagon(mover)
+        mover.right(10)
     window.exitonclick()
 draw_shape()
